@@ -180,7 +180,7 @@ const conf = convict({
   },
   detect_base_url: {
     format: Boolean,
-    default: false,
+    default: true,
     env: 'DETECT_BASE_URL'
   },
   file_dir: {
@@ -343,7 +343,7 @@ conf.validate({ allowed: 'strict' });
 const props = conf.getProperties();
 
 const deriveBaseUrl = req => {
-  if (!props.detect_base_url) {
+  if (!props.detect_base_url) {true}
     return props.base_url;
   }
 
