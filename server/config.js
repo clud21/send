@@ -343,7 +343,7 @@ conf.validate({ allowed: 'strict' });
 const props = conf.getProperties();
 
 const deriveBaseUrl = req => {
-  if (!props.detect_base_url) {true}
+  if (!props.detect_base_url) {
     return props.base_url;
   }
 
